@@ -1,0 +1,48 @@
+# =============================================
+# RVC Text-to-Speech Studio – .gitignore
+# =============================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+.env/
+
+# --- PyTorch / Model Files ---
+# Models are large and should NOT be committed
+models/**/*.pth
+models/**/*.index
+models/**/*.pt
+
+# --- Temporary Audio Files ---
+temp/*.mp3
+temp/*.wav
+temp/*.ogg
+temp/*.flac
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Distribution / Packaging ---
+dist/
+build/
+*.egg-info/
+*.egg
+
+# --- Logs ---
+*.log

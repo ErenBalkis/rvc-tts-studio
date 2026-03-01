@@ -1,0 +1,34 @@
+# ============================================================
+# RVC Text-to-Speech Studio – Requirements
+# ============================================================
+#
+# IMPORTANT: Install PyTorch FIRST, before running pip install.
+#
+#   CPU-only:
+#     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+#
+#   CUDA 11.8:
+#     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#
+#   CUDA 12.1:
+#     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#
+# After torch is installed, run:
+#     pip install -r requirements.txt
+# ============================================================
+
+# --- Core UI ---
+streamlit>=1.30,<2.0
+
+# --- Text-to-Speech engine ---
+edge-tts>=6.1
+
+# --- RVC inference wrapper ---
+rvc-python>=0.1.5
+
+# --- Audio processing ---
+librosa>=0.10,<1.0
+soundfile>=0.12
+
+# --- Numeric (MUST stay below 2.0 for RVC / fairseq compat) ---
+numpy>=1.24,<2.0
