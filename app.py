@@ -170,6 +170,13 @@ with st.sidebar:
             options=models,
             help="Each subfolder in `models/` should contain a `.pth` and optionally a `.index` file.",
         )
+        
+        # Display trainer info dynamically
+        lower_model = selected_model.lower()
+        if "şenol" in lower_model or "senol" in lower_model or "güneş" in lower_model or "gunes" in lower_model:
+            st.info("🎙️ Trained by **AiLab**", icon="ℹ️")
+        elif "ayhan" in lower_model or "kahya" in lower_model:
+            st.info("🎙️ Trained by **hydragee (CoverLai)**", icon="ℹ️")
     else:
         st.info("📂 Create a subfolder in **models/** with a `.pth` file inside and click **Refresh Models**.")
         selected_model = None
@@ -230,6 +237,9 @@ st.markdown(
     '<p class="sub-title">Type your script, choose a voice, and let RVC transform it.</p>',
     unsafe_allow_html=True,
 )
+
+st.error("Bu uygulama tamamen eğitim/geliştirme amaçlıdır. Üretilen seslerin sorumluluğu kullanıcıya aittir ve kötüye kullanım (deepfake, dolandırıcılık vb.) kesinlikle yasaktır.", icon="⚠️")
+
 
 # --- Text input ---
 text_input = st.text_area(
